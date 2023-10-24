@@ -162,6 +162,7 @@ func Proxy(c *gin.Context, requestConverter RequestConverter) {
 			util.SendError(c, errors.New("token is empty"))
 			return
 		}
+	
 		req.Header.Set(AuthHeaderKey, token)
 		req.Header.Del("Authorization")
 
